@@ -1,11 +1,26 @@
 {
     "name": "lumi-crop",
     "version": "0.1.0",
+    "author": "Khalif",
     "description": "Framework-agnostic, dependency-free image cropping library",
     "type": "module",
     "main": "./dist/index.cjs",
     "module": "./dist/index.js",
     "types": "./dist/index.d.ts",
+    "sideEffects": false,
+    "license": "Apache-2.0",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/khalifmv/lumi-crop.git"
+    },
+    "keywords": [
+        "crop",
+        "image-crop",
+        "canvas",
+        "image-editor",
+        "cropper",
+        "web-image"
+    ],
     "exports": {
         ".": {
             "types": "./dist/index.d.ts",
@@ -18,6 +33,7 @@
     ],
     "scripts": {
         "build": "tsup src/index.ts --format esm,cjs --dts --minify --clean --env.NODE_ENV production && npm run build:gzip",
+        "build:publish": "tsup src/index.ts --format esm,cjs --dts --minify --clean --env.NODE_ENV production",
         "build:gzip": "gzip -k -9 dist/*.js dist/*.cjs dist/*.d.ts dist/*.d.cts",
         "dev": "vite docs",
         "dev:build": "tsup src/index.ts --format esm,cjs --dts --watch"

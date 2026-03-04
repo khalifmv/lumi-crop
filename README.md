@@ -93,7 +93,7 @@ Options for the `toBlob` export method.
 
 ## TODO
 
-- [ ] Publish to NPM
+- [x] Publish to NPM
 
 ## License
 

@@ -1,0 +1,39 @@
+0 verbose cli /Users/mitra001/.nvm/versions/node/v20.19.3/bin/node /Users/mitra001/.nvm/versions/node/v20.19.3/bin/npm
+1 info using npm@10.8.2
+2 info using node@v20.19.3
+3 silly config load:file:/Users/mitra001/.nvm/versions/node/v20.19.3/lib/node_modules/npm/npmrc
+4 silly config load:file:/Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/.npmrc
+5 silly config load:file:/Users/mitra001/.npmrc
+6 silly config load:file:/Users/mitra001/.nvm/versions/node/v20.19.3/etc/npmrc
+7 verbose title npm pack
+8 verbose argv "pack"
+9 verbose logfile logs-max:10 dir:/Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/npm-cache/_logs/2026-03-04T19_15_47_047Z-
+10 verbose logfile /Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/npm-cache/_logs/2026-03-04T19_15_47_047Z-debug-0.log
+11 silly logfile done cleaning log files
+12 silly packumentCache heap:4345298944 maxSize:1086324736 maxEntrySize:543162368
+13 notice
+14 notice 📦  lumi-crop@0.1.0
+15 notice Tarball Contents
+16 notice 11.3kB LICENSE
+16 notice 4.6kB README.md
+16 notice 25.9kB dist/index.cjs
+16 notice 3.2kB dist/index.d.cts
+16 notice 3.2kB dist/index.d.ts
+16 notice 25.4kB dist/index.js
+16 notice 1.4kB package.json
+17 notice Tarball Details
+18 notice name: lumi-crop
+19 notice version: 0.1.0
+20 notice filename: lumi-crop-0.1.0.tgz
+21 notice package size: 16.2 kB
+22 notice unpacked size: 75.0 kB
+23 notice shasum: d6c62937ee824b2a5f68c10bcbf728aee69863d7
+24 notice integrity: sha512-gkwZiW+Eqy6f0[...]xg+YCXLyvXgjQ==
+25 notice total files: 7
+26 notice
+27 verbose cwd /Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop
+28 verbose os Darwin 25.0.0
+29 verbose node v20.19.3
+30 verbose npm  v10.8.2
+31 verbose exit 0
+32 info ok

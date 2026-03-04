@@ -1,0 +1,549 @@
+0 verbose cli /Users/mitra001/.nvm/versions/node/v20.19.3/bin/node /Users/mitra001/.nvm/versions/node/v20.19.3/bin/npm
+1 info using npm@10.8.2
+2 info using node@v20.19.3
+3 silly config load:file:/Users/mitra001/.nvm/versions/node/v20.19.3/lib/node_modules/npm/npmrc
+4 silly config load:file:/Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/.npmrc
+5 silly config load:file:/Users/mitra001/.npmrc
+6 silly config load:file:/Users/mitra001/.nvm/versions/node/v20.19.3/etc/npmrc
+7 verbose title npm install terser
+8 verbose argv "install" "--save-dev" "terser"
+9 verbose logfile logs-max:10 dir:/Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/npm-cache/_logs/2026-03-04T19_13_57_608Z-
+10 verbose logfile /Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/npm-cache/_logs/2026-03-04T19_13_57_608Z-debug-0.log
+11 silly packumentCache heap:4345298944 maxSize:1086324736 maxEntrySize:543162368
+12 silly logfile done cleaning log files
+13 silly idealTree buildDeps
+14 silly fetch manifest terser@*
+15 silly packumentCache full:https://registry.npmjs.org/terser cache-miss
+16 http fetch GET 200 https://registry.npmjs.org/terser 185ms (cache miss)
+17 silly packumentCache full:https://registry.npmjs.org/terser set size:undefined disposed:false
+18 silly placeDep ROOT terser@5.46.0 OK for: lumi-crop@0.1.0 want: *
+19 silly fetch manifest @jridgewell/source-map@^0.3.3
+20 silly packumentCache full:https://registry.npmjs.org/@jridgewell%2fsource-map cache-miss
+21 silly fetch manifest commander@^2.20.0
+22 silly packumentCache full:https://registry.npmjs.org/commander cache-miss
+23 silly fetch manifest source-map-support@~0.5.20
+24 silly packumentCache full:https://registry.npmjs.org/source-map-support cache-miss
+25 http fetch GET 200 https://registry.npmjs.org/@jridgewell%2fsource-map 61ms (cache miss)
+26 silly packumentCache full:https://registry.npmjs.org/@jridgewell%2fsource-map set size:undefined disposed:false
+27 http fetch GET 200 https://registry.npmjs.org/source-map-support 116ms (cache miss)
+28 silly packumentCache full:https://registry.npmjs.org/source-map-support set size:undefined disposed:false
+29 http fetch GET 200 https://registry.npmjs.org/commander 134ms (cache miss)
+30 silly packumentCache full:https://registry.npmjs.org/commander set size:undefined disposed:false
+31 silly placeDep ROOT @jridgewell/source-map@0.3.11 OK for: terser@5.46.0 want: ^0.3.3
+32 silly placeDep node_modules/terser commander@2.20.3 OK for: terser@5.46.0 want: ^2.20.0
+33 silly placeDep ROOT source-map-support@0.5.21 OK for: terser@5.46.0 want: ~0.5.20
+34 silly fetch manifest buffer-from@^1.0.0
+35 silly packumentCache full:https://registry.npmjs.org/buffer-from cache-miss
+36 silly fetch manifest source-map@^0.6.0
+37 silly packumentCache full:https://registry.npmjs.org/source-map cache-miss
+38 http fetch GET 200 https://registry.npmjs.org/buffer-from 50ms (cache miss)
+39 silly packumentCache full:https://registry.npmjs.org/buffer-from set size:undefined disposed:false
+40 http fetch GET 200 https://registry.npmjs.org/source-map 50ms (cache miss)
+41 silly packumentCache full:https://registry.npmjs.org/source-map set size:undefined disposed:false
+42 silly placeDep ROOT buffer-from@1.1.2 OK for: source-map-support@0.5.21 want: ^1.0.0
+43 silly placeDep node_modules/source-map-support source-map@0.6.1 OK for: source-map-support@0.5.21 want: ^0.6.0
+44 silly reify moves {}
+45 silly audit bulk request {
+45 silly audit   '@esbuild/aix-ppc64': [ '0.27.3', '0.25.12' ],
+45 silly audit   '@esbuild/android-arm': [ '0.27.3', '0.25.12' ],
+45 silly audit   '@esbuild/android-arm64': [ '0.27.3', '0.25.12' ],
+45 silly audit   '@esbuild/android-x64': [ '0.27.3', '0.25.12' ],
+45 silly audit   '@esbuild/darwin-arm64': [ '0.27.3', '0.25.12' ],
+45 silly audit   '@esbuild/darwin-x64': [ '0.27.3', '0.25.12' ],
+45 silly audit   '@esbuild/freebsd-arm64': [ '0.27.3', '0.25.12' ],
+45 silly audit   '@esbuild/freebsd-x64': [ '0.27.3', '0.25.12' ],
+45 silly audit   '@esbuild/linux-arm': [ '0.27.3', '0.25.12' ],
+45 silly audit   '@esbuild/linux-arm64': [ '0.27.3', '0.25.12' ],
+45 silly audit   '@esbuild/linux-ia32': [ '0.27.3', '0.25.12' ],
+45 silly audit   '@esbuild/linux-loong64': [ '0.27.3', '0.25.12' ],
+45 silly audit   '@esbuild/linux-mips64el': [ '0.27.3', '0.25.12' ],
+45 silly audit   '@esbuild/linux-ppc64': [ '0.27.3', '0.25.12' ],
+45 silly audit   '@esbuild/linux-riscv64': [ '0.27.3', '0.25.12' ],
+45 silly audit   '@esbuild/linux-s390x': [ '0.27.3', '0.25.12' ],
+45 silly audit   '@esbuild/linux-x64': [ '0.27.3', '0.25.12' ],
+45 silly audit   '@esbuild/netbsd-arm64': [ '0.27.3', '0.25.12' ],
+45 silly audit   '@esbuild/netbsd-x64': [ '0.27.3', '0.25.12' ],
+45 silly audit   '@esbuild/openbsd-arm64': [ '0.27.3', '0.25.12' ],
+45 silly audit   '@esbuild/openbsd-x64': [ '0.27.3', '0.25.12' ],
+45 silly audit   '@esbuild/openharmony-arm64': [ '0.27.3', '0.25.12' ],
+45 silly audit   '@esbuild/sunos-x64': [ '0.27.3', '0.25.12' ],
+45 silly audit   '@esbuild/win32-arm64': [ '0.27.3', '0.25.12' ],
+45 silly audit   '@esbuild/win32-ia32': [ '0.27.3', '0.25.12' ],
+45 silly audit   '@esbuild/win32-x64': [ '0.27.3', '0.25.12' ],
+45 silly audit   '@jridgewell/gen-mapping': [ '0.3.13' ],
+45 silly audit   '@jridgewell/resolve-uri': [ '3.1.2' ],
+45 silly audit   '@jridgewell/sourcemap-codec': [ '1.5.5' ],
+45 silly audit   '@jridgewell/trace-mapping': [ '0.3.31' ],
+45 silly audit   '@rollup/rollup-android-arm-eabi': [ '4.59.0' ],
+45 silly audit   '@rollup/rollup-android-arm64': [ '4.59.0' ],
+45 silly audit   '@rollup/rollup-darwin-arm64': [ '4.59.0' ],
+45 silly audit   '@rollup/rollup-darwin-x64': [ '4.59.0' ],
+45 silly audit   '@rollup/rollup-freebsd-arm64': [ '4.59.0' ],
+45 silly audit   '@rollup/rollup-freebsd-x64': [ '4.59.0' ],
+45 silly audit   '@rollup/rollup-linux-arm-gnueabihf': [ '4.59.0' ],
+45 silly audit   '@rollup/rollup-linux-arm-musleabihf': [ '4.59.0' ],
+45 silly audit   '@rollup/rollup-linux-arm64-gnu': [ '4.59.0' ],
+45 silly audit   '@rollup/rollup-linux-arm64-musl': [ '4.59.0' ],
+45 silly audit   '@rollup/rollup-linux-loong64-gnu': [ '4.59.0' ],
+45 silly audit   '@rollup/rollup-linux-loong64-musl': [ '4.59.0' ],
+45 silly audit   '@rollup/rollup-linux-ppc64-gnu': [ '4.59.0' ],
+45 silly audit   '@rollup/rollup-linux-ppc64-musl': [ '4.59.0' ],
+45 silly audit   '@rollup/rollup-linux-riscv64-gnu': [ '4.59.0' ],
+45 silly audit   '@rollup/rollup-linux-riscv64-musl': [ '4.59.0' ],
+45 silly audit   '@rollup/rollup-linux-s390x-gnu': [ '4.59.0' ],
+45 silly audit   '@rollup/rollup-linux-x64-gnu': [ '4.59.0' ],
+45 silly audit   '@rollup/rollup-linux-x64-musl': [ '4.59.0' ],
+45 silly audit   '@rollup/rollup-openbsd-x64': [ '4.59.0' ],
+45 silly audit   '@rollup/rollup-openharmony-arm64': [ '4.59.0' ],
+45 silly audit   '@rollup/rollup-win32-arm64-msvc': [ '4.59.0' ],
+45 silly audit   '@rollup/rollup-win32-ia32-msvc': [ '4.59.0' ],
+45 silly audit   '@rollup/rollup-win32-x64-gnu': [ '4.59.0' ],
+45 silly audit   '@rollup/rollup-win32-x64-msvc': [ '4.59.0' ],
+45 silly audit   '@types/estree': [ '1.0.8' ],
+45 silly audit   acorn: [ '8.16.0' ],
+45 silly audit   'any-promise': [ '1.3.0' ],
+45 silly audit   'bundle-require': [ '5.1.0' ],
+45 silly audit   cac: [ '6.7.14' ],
+45 silly audit   chokidar: [ '4.0.3' ],
+45 silly audit   commander: [ '4.1.1', '2.20.3' ],
+45 silly audit   confbox: [ '0.1.8' ],
+45 silly audit   consola: [ '3.4.2' ],
+45 silly audit   debug: [ '4.4.3' ],
+45 silly audit   esbuild: [ '0.27.3', '0.25.12' ],
+45 silly audit   fdir: [ '6.5.0' ],
+45 silly audit   'fix-dts-default-cjs-exports': [ '1.0.1' ],
+45 silly audit   fsevents: [ '2.3.3' ],
+45 silly audit   joycon: [ '3.1.1' ],
+45 silly audit   lilconfig: [ '3.1.3' ],
+45 silly audit   'lines-and-columns': [ '1.2.4' ],
+45 silly audit   'load-tsconfig': [ '0.2.5' ],
+45 silly audit   'magic-string': [ '0.30.21' ],
+45 silly audit   mlly: [ '1.8.0' ],
+45 silly audit   ms: [ '2.1.3' ],
+45 silly audit   mz: [ '2.7.0' ],
+45 silly audit   nanoid: [ '3.3.11' ],
+45 silly audit   'object-assign': [ '4.1.1' ],
+45 silly audit   pathe: [ '2.0.3' ],
+45 silly audit   picocolors: [ '1.1.1' ],
+45 silly audit   picomatch: [ '4.0.3' ],
+45 silly audit   pirates: [ '4.0.7' ],
+45 silly audit   'pkg-types': [ '1.3.1' ],
+45 silly audit   postcss: [ '8.5.8' ],
+45 silly audit   'postcss-load-config': [ '6.0.1' ],
+45 silly audit   readdirp: [ '4.1.2' ],
+45 silly audit   'resolve-from': [ '5.0.0' ],
+45 silly audit   rollup: [ '4.59.0' ],
+45 silly audit   'source-map': [ '0.7.6', '0.6.1' ],
+45 silly audit   'source-map-js': [ '1.2.1' ],
+45 silly audit   sucrase: [ '3.35.1' ],
+45 silly audit   thenify: [ '3.3.1' ],
+45 silly audit   'thenify-all': [ '1.6.0' ],
+45 silly audit   tinyexec: [ '0.3.2' ],
+45 silly audit   tinyglobby: [ '0.2.15' ],
+45 silly audit   'tree-kill': [ '1.2.2' ],
+45 silly audit   'ts-interface-checker': [ '0.1.13' ],
+45 silly audit   tsup: [ '8.5.1' ],
+45 silly audit   typescript: [ '5.9.3' ],
+45 silly audit   ufo: [ '1.6.3' ],
+45 silly audit   vite: [ '6.4.1' ],
+45 silly audit   terser: [ '5.46.0' ],
+45 silly audit   '@jridgewell/source-map': [ '0.3.11' ],
+45 silly audit   'source-map-support': [ '0.5.21' ],
+45 silly audit   'buffer-from': [ '1.1.2' ]
+45 silly audit }
+46 verbose reify failed optional dependency /Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@rollup/rollup-win32-x64-msvc
+47 silly reify mark deleted [
+47 silly reify   '/Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@rollup/rollup-win32-x64-msvc'
+47 silly reify ]
+48 verbose reify failed optional dependency /Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@rollup/rollup-win32-x64-gnu
+49 silly reify mark deleted [
+49 silly reify   '/Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@rollup/rollup-win32-x64-gnu'
+49 silly reify ]
+50 verbose reify failed optional dependency /Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@rollup/rollup-win32-ia32-msvc
+51 silly reify mark deleted [
+51 silly reify   '/Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@rollup/rollup-win32-ia32-msvc'
+51 silly reify ]
+52 verbose reify failed optional dependency /Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@rollup/rollup-win32-arm64-msvc
+53 silly reify mark deleted [
+53 silly reify   '/Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@rollup/rollup-win32-arm64-msvc'
+53 silly reify ]
+54 verbose reify failed optional dependency /Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@rollup/rollup-openharmony-arm64
+55 silly reify mark deleted [
+55 silly reify   '/Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@rollup/rollup-openharmony-arm64'
+55 silly reify ]
+56 verbose reify failed optional dependency /Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@rollup/rollup-openbsd-x64
+57 silly reify mark deleted [
+57 silly reify   '/Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@rollup/rollup-openbsd-x64'
+57 silly reify ]
+58 verbose reify failed optional dependency /Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@rollup/rollup-linux-x64-musl
+59 silly reify mark deleted [
+59 silly reify   '/Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@rollup/rollup-linux-x64-musl'
+59 silly reify ]
+60 verbose reify failed optional dependency /Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@rollup/rollup-linux-x64-gnu
+61 silly reify mark deleted [
+61 silly reify   '/Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@rollup/rollup-linux-x64-gnu'
+61 silly reify ]
+62 verbose reify failed optional dependency /Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@rollup/rollup-linux-s390x-gnu
+63 silly reify mark deleted [
+63 silly reify   '/Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@rollup/rollup-linux-s390x-gnu'
+63 silly reify ]
+64 verbose reify failed optional dependency /Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@rollup/rollup-linux-riscv64-musl
+65 silly reify mark deleted [
+65 silly reify   '/Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@rollup/rollup-linux-riscv64-musl'
+65 silly reify ]
+66 verbose reify failed optional dependency /Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@rollup/rollup-linux-riscv64-gnu
+67 silly reify mark deleted [
+67 silly reify   '/Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@rollup/rollup-linux-riscv64-gnu'
+67 silly reify ]
+68 verbose reify failed optional dependency /Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@rollup/rollup-linux-ppc64-musl
+69 silly reify mark deleted [
+69 silly reify   '/Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@rollup/rollup-linux-ppc64-musl'
+69 silly reify ]
+70 verbose reify failed optional dependency /Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@rollup/rollup-linux-ppc64-gnu
+71 silly reify mark deleted [
+71 silly reify   '/Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@rollup/rollup-linux-ppc64-gnu'
+71 silly reify ]
+72 verbose reify failed optional dependency /Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@rollup/rollup-linux-loong64-musl
+73 silly reify mark deleted [
+73 silly reify   '/Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@rollup/rollup-linux-loong64-musl'
+73 silly reify ]
+74 verbose reify failed optional dependency /Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@rollup/rollup-linux-loong64-gnu
+75 silly reify mark deleted [
+75 silly reify   '/Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@rollup/rollup-linux-loong64-gnu'
+75 silly reify ]
+76 verbose reify failed optional dependency /Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@rollup/rollup-linux-arm64-musl
+77 silly reify mark deleted [
+77 silly reify   '/Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@rollup/rollup-linux-arm64-musl'
+77 silly reify ]
+78 verbose reify failed optional dependency /Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@rollup/rollup-linux-arm64-gnu
+79 silly reify mark deleted [
+79 silly reify   '/Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@rollup/rollup-linux-arm64-gnu'
+79 silly reify ]
+80 verbose reify failed optional dependency /Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@rollup/rollup-linux-arm-musleabihf
+81 silly reify mark deleted [
+81 silly reify   '/Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@rollup/rollup-linux-arm-musleabihf'
+81 silly reify ]
+82 verbose reify failed optional dependency /Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@rollup/rollup-linux-arm-gnueabihf
+83 silly reify mark deleted [
+83 silly reify   '/Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@rollup/rollup-linux-arm-gnueabihf'
+83 silly reify ]
+84 verbose reify failed optional dependency /Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@rollup/rollup-freebsd-x64
+85 silly reify mark deleted [
+85 silly reify   '/Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@rollup/rollup-freebsd-x64'
+85 silly reify ]
+86 verbose reify failed optional dependency /Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@rollup/rollup-freebsd-arm64
+87 silly reify mark deleted [
+87 silly reify   '/Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@rollup/rollup-freebsd-arm64'
+87 silly reify ]
+88 verbose reify failed optional dependency /Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@rollup/rollup-darwin-x64
+89 silly reify mark deleted [
+89 silly reify   '/Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@rollup/rollup-darwin-x64'
+89 silly reify ]
+90 verbose reify failed optional dependency /Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@rollup/rollup-android-arm64
+91 silly reify mark deleted [
+91 silly reify   '/Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@rollup/rollup-android-arm64'
+91 silly reify ]
+92 verbose reify failed optional dependency /Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@rollup/rollup-android-arm-eabi
+93 silly reify mark deleted [
+93 silly reify   '/Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@rollup/rollup-android-arm-eabi'
+93 silly reify ]
+94 verbose reify failed optional dependency /Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@esbuild/win32-x64
+95 silly reify mark deleted [
+95 silly reify   '/Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@esbuild/win32-x64'
+95 silly reify ]
+96 verbose reify failed optional dependency /Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@esbuild/win32-ia32
+97 silly reify mark deleted [
+97 silly reify   '/Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@esbuild/win32-ia32'
+97 silly reify ]
+98 verbose reify failed optional dependency /Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@esbuild/win32-arm64
+99 silly reify mark deleted [
+99 silly reify   '/Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@esbuild/win32-arm64'
+99 silly reify ]
+100 verbose reify failed optional dependency /Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@esbuild/sunos-x64
+101 silly reify mark deleted [
+101 silly reify   '/Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@esbuild/sunos-x64'
+101 silly reify ]
+102 verbose reify failed optional dependency /Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@esbuild/openharmony-arm64
+103 silly reify mark deleted [
+103 silly reify   '/Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@esbuild/openharmony-arm64'
+103 silly reify ]
+104 verbose reify failed optional dependency /Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@esbuild/openbsd-x64
+105 silly reify mark deleted [
+105 silly reify   '/Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@esbuild/openbsd-x64'
+105 silly reify ]
+106 verbose reify failed optional dependency /Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@esbuild/openbsd-arm64
+107 silly reify mark deleted [
+107 silly reify   '/Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@esbuild/openbsd-arm64'
+107 silly reify ]
+108 verbose reify failed optional dependency /Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@esbuild/netbsd-x64
+109 silly reify mark deleted [
+109 silly reify   '/Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@esbuild/netbsd-x64'
+109 silly reify ]
+110 verbose reify failed optional dependency /Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@esbuild/netbsd-arm64
+111 silly reify mark deleted [
+111 silly reify   '/Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@esbuild/netbsd-arm64'
+111 silly reify ]
+112 verbose reify failed optional dependency /Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@esbuild/linux-x64
+113 silly reify mark deleted [
+113 silly reify   '/Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@esbuild/linux-x64'
+113 silly reify ]
+114 verbose reify failed optional dependency /Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@esbuild/linux-s390x
+115 silly reify mark deleted [
+115 silly reify   '/Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@esbuild/linux-s390x'
+115 silly reify ]
+116 verbose reify failed optional dependency /Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@esbuild/linux-riscv64
+117 silly reify mark deleted [
+117 silly reify   '/Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@esbuild/linux-riscv64'
+117 silly reify ]
+118 verbose reify failed optional dependency /Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@esbuild/linux-ppc64
+119 silly reify mark deleted [
+119 silly reify   '/Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@esbuild/linux-ppc64'
+119 silly reify ]
+120 verbose reify failed optional dependency /Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@esbuild/linux-mips64el
+121 silly reify mark deleted [
+121 silly reify   '/Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@esbuild/linux-mips64el'
+121 silly reify ]
+122 verbose reify failed optional dependency /Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@esbuild/linux-loong64
+123 silly reify mark deleted [
+123 silly reify   '/Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@esbuild/linux-loong64'
+123 silly reify ]
+124 verbose reify failed optional dependency /Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@esbuild/linux-ia32
+125 silly reify mark deleted [
+125 silly reify   '/Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@esbuild/linux-ia32'
+125 silly reify ]
+126 verbose reify failed optional dependency /Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@esbuild/linux-arm64
+127 silly reify mark deleted [
+127 silly reify   '/Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@esbuild/linux-arm64'
+127 silly reify ]
+128 verbose reify failed optional dependency /Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@esbuild/linux-arm
+129 silly reify mark deleted [
+129 silly reify   '/Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@esbuild/linux-arm'
+129 silly reify ]
+130 verbose reify failed optional dependency /Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@esbuild/freebsd-x64
+131 silly reify mark deleted [
+131 silly reify   '/Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@esbuild/freebsd-x64'
+131 silly reify ]
+132 verbose reify failed optional dependency /Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@esbuild/freebsd-arm64
+133 silly reify mark deleted [
+133 silly reify   '/Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@esbuild/freebsd-arm64'
+133 silly reify ]
+134 verbose reify failed optional dependency /Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@esbuild/darwin-x64
+135 silly reify mark deleted [
+135 silly reify   '/Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@esbuild/darwin-x64'
+135 silly reify ]
+136 verbose reify failed optional dependency /Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@esbuild/android-x64
+137 silly reify mark deleted [
+137 silly reify   '/Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@esbuild/android-x64'
+137 silly reify ]
+138 verbose reify failed optional dependency /Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@esbuild/android-arm64
+139 silly reify mark deleted [
+139 silly reify   '/Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@esbuild/android-arm64'
+139 silly reify ]
+140 verbose reify failed optional dependency /Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@esbuild/android-arm
+141 silly reify mark deleted [
+141 silly reify   '/Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@esbuild/android-arm'
+141 silly reify ]
+142 verbose reify failed optional dependency /Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@esbuild/aix-ppc64
+143 silly reify mark deleted [
+143 silly reify   '/Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/@esbuild/aix-ppc64'
+143 silly reify ]
+144 verbose reify failed optional dependency /Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/vite/node_modules/@esbuild/win32-x64
+145 silly reify mark deleted [
+145 silly reify   '/Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/vite/node_modules/@esbuild/win32-x64'
+145 silly reify ]
+146 verbose reify failed optional dependency /Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/vite/node_modules/@esbuild/win32-ia32
+147 silly reify mark deleted [
+147 silly reify   '/Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/vite/node_modules/@esbuild/win32-ia32'
+147 silly reify ]
+148 verbose reify failed optional dependency /Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/vite/node_modules/@esbuild/win32-arm64
+149 silly reify mark deleted [
+149 silly reify   '/Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/vite/node_modules/@esbuild/win32-arm64'
+149 silly reify ]
+150 verbose reify failed optional dependency /Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/vite/node_modules/@esbuild/sunos-x64
+151 silly reify mark deleted [
+151 silly reify   '/Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/vite/node_modules/@esbuild/sunos-x64'
+151 silly reify ]
+152 verbose reify failed optional dependency /Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/vite/node_modules/@esbuild/openharmony-arm64
+153 silly reify mark deleted [
+153 silly reify   '/Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/vite/node_modules/@esbuild/openharmony-arm64'
+153 silly reify ]
+154 verbose reify failed optional dependency /Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/vite/node_modules/@esbuild/openbsd-x64
+155 silly reify mark deleted [
+155 silly reify   '/Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/vite/node_modules/@esbuild/openbsd-x64'
+155 silly reify ]
+156 verbose reify failed optional dependency /Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/vite/node_modules/@esbuild/openbsd-arm64
+157 silly reify mark deleted [
+157 silly reify   '/Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/vite/node_modules/@esbuild/openbsd-arm64'
+157 silly reify ]
+158 verbose reify failed optional dependency /Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/vite/node_modules/@esbuild/netbsd-x64
+159 silly reify mark deleted [
+159 silly reify   '/Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/vite/node_modules/@esbuild/netbsd-x64'
+159 silly reify ]
+160 verbose reify failed optional dependency /Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/vite/node_modules/@esbuild/netbsd-arm64
+161 silly reify mark deleted [
+161 silly reify   '/Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/vite/node_modules/@esbuild/netbsd-arm64'
+161 silly reify ]
+162 verbose reify failed optional dependency /Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/vite/node_modules/@esbuild/linux-x64
+163 silly reify mark deleted [
+163 silly reify   '/Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/vite/node_modules/@esbuild/linux-x64'
+163 silly reify ]
+164 verbose reify failed optional dependency /Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/vite/node_modules/@esbuild/linux-s390x
+165 silly reify mark deleted [
+165 silly reify   '/Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/vite/node_modules/@esbuild/linux-s390x'
+165 silly reify ]
+166 verbose reify failed optional dependency /Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/vite/node_modules/@esbuild/linux-riscv64
+167 silly reify mark deleted [
+167 silly reify   '/Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/vite/node_modules/@esbuild/linux-riscv64'
+167 silly reify ]
+168 verbose reify failed optional dependency /Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/vite/node_modules/@esbuild/linux-ppc64
+169 silly reify mark deleted [
+169 silly reify   '/Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/vite/node_modules/@esbuild/linux-ppc64'
+169 silly reify ]
+170 verbose reify failed optional dependency /Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/vite/node_modules/@esbuild/linux-mips64el
+171 silly reify mark deleted [
+171 silly reify   '/Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/vite/node_modules/@esbuild/linux-mips64el'
+171 silly reify ]
+172 verbose reify failed optional dependency /Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/vite/node_modules/@esbuild/linux-loong64
+173 silly reify mark deleted [
+173 silly reify   '/Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/vite/node_modules/@esbuild/linux-loong64'
+173 silly reify ]
+174 verbose reify failed optional dependency /Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/vite/node_modules/@esbuild/linux-ia32
+175 silly reify mark deleted [
+175 silly reify   '/Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/vite/node_modules/@esbuild/linux-ia32'
+175 silly reify ]
+176 verbose reify failed optional dependency /Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/vite/node_modules/@esbuild/linux-arm64
+177 silly reify mark deleted [
+177 silly reify   '/Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/vite/node_modules/@esbuild/linux-arm64'
+177 silly reify ]
+178 verbose reify failed optional dependency /Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/vite/node_modules/@esbuild/linux-arm
+179 silly reify mark deleted [
+179 silly reify   '/Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/vite/node_modules/@esbuild/linux-arm'
+179 silly reify ]
+180 verbose reify failed optional dependency /Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/vite/node_modules/@esbuild/freebsd-x64
+181 silly reify mark deleted [
+181 silly reify   '/Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/vite/node_modules/@esbuild/freebsd-x64'
+181 silly reify ]
+182 verbose reify failed optional dependency /Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/vite/node_modules/@esbuild/freebsd-arm64
+183 silly reify mark deleted [
+183 silly reify   '/Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/vite/node_modules/@esbuild/freebsd-arm64'
+183 silly reify ]
+184 verbose reify failed optional dependency /Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/vite/node_modules/@esbuild/darwin-x64
+185 silly reify mark deleted [
+185 silly reify   '/Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/vite/node_modules/@esbuild/darwin-x64'
+185 silly reify ]
+186 verbose reify failed optional dependency /Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/vite/node_modules/@esbuild/android-x64
+187 silly reify mark deleted [
+187 silly reify   '/Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/vite/node_modules/@esbuild/android-x64'
+187 silly reify ]
+188 verbose reify failed optional dependency /Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/vite/node_modules/@esbuild/android-arm64
+189 silly reify mark deleted [
+189 silly reify   '/Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/vite/node_modules/@esbuild/android-arm64'
+189 silly reify ]
+190 verbose reify failed optional dependency /Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/vite/node_modules/@esbuild/android-arm
+191 silly reify mark deleted [
+191 silly reify   '/Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/vite/node_modules/@esbuild/android-arm'
+191 silly reify ]
+192 verbose reify failed optional dependency /Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/vite/node_modules/@esbuild/aix-ppc64
+193 silly reify mark deleted [
+193 silly reify   '/Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/node_modules/vite/node_modules/@esbuild/aix-ppc64'
+193 silly reify ]
+194 silly tarball no local data for buffer-from@https://registry.npmjs.org/buffer-from/-/buffer-from-1.1.2.tgz. Extracting by manifest.
+195 silly tarball no local data for @jridgewell/source-map@https://registry.npmjs.org/@jridgewell/source-map/-/source-map-0.3.11.tgz. Extracting by manifest.
+196 silly tarball no local data for source-map-support@https://registry.npmjs.org/source-map-support/-/source-map-support-0.5.21.tgz. Extracting by manifest.
+197 silly tarball no local data for terser@https://registry.npmjs.org/terser/-/terser-5.46.0.tgz. Extracting by manifest.
+198 silly tarball no local data for source-map@https://registry.npmjs.org/source-map/-/source-map-0.6.1.tgz. Extracting by manifest.
+199 silly tarball no local data for commander@https://registry.npmjs.org/commander/-/commander-2.20.3.tgz. Extracting by manifest.
+200 http fetch GET 200 https://registry.npmjs.org/buffer-from/-/buffer-from-1.1.2.tgz 52ms (cache miss)
+201 http fetch GET 200 https://registry.npmjs.org/@jridgewell/source-map/-/source-map-0.3.11.tgz 82ms (cache miss)
+202 http fetch GET 200 https://registry.npmjs.org/source-map-support/-/source-map-support-0.5.21.tgz 112ms (cache miss)
+203 http fetch GET 200 https://registry.npmjs.org/commander/-/commander-2.20.3.tgz 115ms (cache miss)
+204 http fetch GET 200 https://registry.npmjs.org/source-map/-/source-map-0.6.1.tgz 139ms (cache miss)
+205 http fetch GET 200 https://registry.npmjs.org/terser/-/terser-5.46.0.tgz 171ms (cache miss)
+206 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 260ms
+207 silly audit report {}
+208 silly ADD node_modules/buffer-from
+209 silly ADD node_modules/source-map-support
+210 silly ADD node_modules/source-map-support/node_modules/source-map
+211 silly ADD node_modules/@jridgewell/source-map
+212 silly ADD node_modules/terser
+213 silly ADD node_modules/terser/node_modules/commander
+214 silly ADD
+215 silly ADD
+216 silly ADD
+217 silly ADD
+218 silly ADD
+219 silly ADD
+220 silly ADD
+221 silly ADD
+222 silly ADD
+223 silly ADD
+224 silly ADD
+225 silly ADD
+226 silly ADD
+227 silly ADD
+228 silly ADD
+229 silly ADD
+230 silly ADD
+231 silly ADD
+232 silly ADD
+233 silly ADD
+234 silly ADD
+235 silly ADD
+236 silly ADD
+237 silly ADD
+238 silly ADD
+239 silly ADD
+240 silly ADD
+241 silly ADD
+242 silly ADD
+243 silly ADD
+244 silly ADD
+245 silly ADD
+246 silly ADD
+247 silly ADD
+248 silly ADD
+249 silly ADD
+250 silly ADD
+251 silly ADD
+252 silly ADD
+253 silly ADD
+254 silly ADD
+255 silly ADD
+256 silly ADD
+257 silly ADD
+258 silly ADD
+259 silly ADD
+260 silly ADD
+261 silly ADD
+262 silly ADD
+263 silly ADD
+264 silly ADD
+265 silly ADD
+266 silly ADD
+267 silly ADD
+268 silly ADD
+269 silly ADD
+270 silly ADD
+271 silly ADD
+272 silly ADD
+273 silly ADD
+274 silly ADD
+275 silly ADD
+276 silly ADD
+277 silly ADD
+278 silly ADD
+279 silly ADD
+280 silly ADD
+281 silly ADD
+282 silly ADD
+283 silly ADD
+284 silly ADD
+285 silly ADD
+286 silly ADD
+287 silly ADD
+288 verbose cwd /Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop
+289 verbose os Darwin 25.0.0
+290 verbose node v20.19.3
+291 verbose npm  v10.8.2
+292 verbose exit 0
+293 info ok

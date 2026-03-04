@@ -1,0 +1,34 @@
+0 verbose cli /Users/mitra001/.nvm/versions/node/v20.19.3/bin/node /Users/mitra001/.nvm/versions/node/v20.19.3/bin/npm
+1 info using npm@10.8.2
+2 info using node@v20.19.3
+3 silly config load:file:/Users/mitra001/.nvm/versions/node/v20.19.3/lib/node_modules/npm/npmrc
+4 silly config load:file:/Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/.npmrc
+5 silly config load:file:/Users/mitra001/.npmrc
+6 silly config load:file:/Users/mitra001/.nvm/versions/node/v20.19.3/etc/npmrc
+7 verbose title npm login
+8 verbose argv "login"
+9 verbose logfile logs-max:10 dir:/Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/npm-cache/_logs/2026-03-04T19_19_35_713Z-
+10 verbose logfile /Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop/npm-cache/_logs/2026-03-04T19_19_35_713Z-debug-0.log
+11 notice Log in on https://registry.npmjs.org/
+12 verbose web login before first POST
+13 silly logfile start cleaning logs, removing 1 files
+14 silly logfile done cleaning log files
+15 http fetch POST 200 https://registry.npmjs.org/-/v1/login 332ms
+16 verbose web auth got response {
+16 verbose web auth   loginUrl: 'https://www.npmjs.com/login?next=/login/cli/325ece4e-15fd-48b4-9d5c-5c36be708b45',
+16 verbose web auth   doneUrl: 'https://registry.npmjs.org/-/v1/done?sessionId=325ece4e-15fd-48b4-9d5c-5c36be708b45'
+16 verbose web auth }
+17 verbose web auth opening url pair
+18 http fetch GET 202 https://registry.npmjs.org/-/v1/done?sessionId=*** 227ms
+19 http fetch GET 202 https://registry.npmjs.org/-/v1/done?sessionId=*** 467ms
+20 http fetch GET 202 https://registry.npmjs.org/-/v1/done?sessionId=*** 229ms
+21 http fetch GET 202 https://registry.npmjs.org/-/v1/done?sessionId=*** 268ms
+22 http fetch GET 200 https://registry.npmjs.org/-/v1/done?sessionId=*** 237ms
+23 verbose web auth done-check finished
+24 info login Logged in on https://registry.npmjs.org/.
+25 verbose cwd /Users/mitra001/Documents/khalif/lvminance-lab/lumi-crop
+26 verbose os Darwin 25.0.0
+27 verbose node v20.19.3
+28 verbose npm  v10.8.2
+29 verbose exit 0
+30 info ok
