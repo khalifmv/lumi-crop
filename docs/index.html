@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>LumiCrop Demo</title>
+    <script src="./ruler.js"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="desktop-layout">
+        <!-- Left: Mobile cropper shell -->
+        <div class="desktop-left">
+            <main class="mobile-shell">
+                <div class="top-bar">
+                    <button class="icon-btn" id="btn-load">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M17 8l-5-5-5 5M12 3v12" />
+                        </svg>
+                    </button>
+                    <div class="center-tools">
+                        <button class="icon-btn" id="btn-flipx" title="Flip Horizontal">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M3 12h18M12 3v18M8 8l4-4 4 4M8 16l4 4 4-4" />
+                            </svg>
+                        </button>
+                        <div class="select-wrapper">
+                            <select id="ratio-select" title="Aspect Ratio">
+                                <option value="free">Freeform</option>
+                                <option value="1">Square</option>
+                                <option value="1.3333">4:3</option>
+                                <option value="1.7778">16:9</option>
+                                <option value="0.5625">9:16</option>
+                                <option value="1.5">3:2</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button class="text-btn" id="btn-export">Done</button>
+                    <input type="file" id="file-input" accept="image/*" />
+                </div>
+
+                <div id="viewport">
+                    <div id="wrapper">
+                        <canvas id="preview-canvas"></canvas>
+                    </div>
+                    <div id="status"></div>
+                </div>
+
+                <div class="bottom-bar">
+                    <div id="rotation-val">0°</div>
+                    <div id="ruler-container">
+                        <div class="ruler-fade-overlay" aria-hidden="true"></div>
+                        <div class="ruler-center-mark"></div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <!-- Right: Product info panel -->
+        <div class="desktop-right">
+            <div class="info-panel">
+                <img src="./lumicrop.png" alt="LumiCrop" class="info-logo" />
+                <p class="info-desc">
+                    A lightweight, framework-agnostic image cropper engine for modern web applications.
+                </p>
+
+                <div class="info-tags">
+                    <span class="tag">Zero-dependency</span>
+                    <span class="tag">TypeScript</span>
+                    <span class="tag">Headless</span>
+                </div>
+
+                <div class="code-block">
+                    <div class="code-label">Quick start</div>
+                    <pre
+                        style="user-select: all;"><code><span class="c-kw">import</span> { LumiCrop } <span class="c-kw">from</span> <span class="c-str">'lumi-crop'</span>;
+
+<span class="c-kw">const</span> cropper = <span class="c-kw">new</span> <span class="c-fn">LumiCrop</span>({
+  canvas: document.<span class="c-fn">getElementById</span>(<span class="c-str">'canvas'</span>),
+  image: file,          <span class="c-cm">// File | URL | HTMLImageElement</span>
+  aspectRatio: <span class="c-num">16</span> / <span class="c-num">9</span>, <span class="c-cm">// optional</span>
+});
+
+<span class="c-kw">await</span> cropper.<span class="c-fn">ready</span>();
+
+<span class="c-cm">// Export the cropped result</span>
+<span class="c-kw">const</span> blob = <span class="c-kw">await</span> cropper.<span class="c-fn">toBlob</span>({ type: <span class="c-str">'image/jpeg'</span> });</code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="./index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,396 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: radial-gradient(circle at top, #345b62 0%, #223e44 45%, #182c31 100%);
+    /* background: radial-gradient(circle at top, #0b191c 0%, #010a0c 45%, #182c31 100%); */
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+/* ── Desktop two-column layout ── */
+.desktop-layout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 56px;
+    width: 100%;
+    min-height: 100vh;
+    padding: 24px 48px;
+}
+
+.desktop-left {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.desktop-right {
+    flex: 1 1 0;
+    min-width: 0;
+    max-width: 560px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+/* ── Mobile-shell phone frame ── */
+.mobile-shell {
+    width: min(360px, 100vw);
+    height: min(780px, calc(100vh - 48px));
+    display: flex;
+    flex-direction: column;
+    background: #000;
+    overflow: hidden;
+    border-radius: 40px;
+    box-shadow:
+        0 0 0 1px rgba(255, 255, 255, 0.10),
+        0 24px 60px rgba(0, 0, 0, 0.6),
+        0 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* ── Info panel (right column) ── */
+.info-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+}
+
+.info-logo {
+    height: 36px;
+    width: auto;
+    object-fit: contain;
+    object-position: left center;
+    filter: brightness(0) invert(1);
+}
+
+.info-desc {
+    font-size: 15px;
+    line-height: 1.65;
+    color: rgba(255, 255, 255, 0.72);
+    max-width: 440px;
+}
+
+.info-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tag {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    padding: 4px 12px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: rgba(255, 255, 255, 0.65);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* ── Code block ── */
+.code-block {
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(8px);
+}
+
+.code-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.35);
+    padding: 12px 20px 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.code-block pre {
+    margin: 0;
+    padding: 18px 20px 20px;
+    overflow-x: auto;
+}
+
+.code-block code {
+    font-family: "SF Mono", ui-monospace, "Cascadia Code", "Fira Code", Menlo, Consolas, monospace;
+    font-size: 13px;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.85);
+    white-space: pre;
+}
+
+/* Syntax token colors */
+.c-kw {
+    color: #c792ea;
+}
+
+/* keyword - purple */
+.c-fn {
+    color: #82aaff;
+}
+
+/* function - blue */
+.c-str {
+    color: #c3e88d;
+}
+
+/* string - green */
+.c-num {
+    color: #f78c6c;
+}
+
+/* number - orange */
+.c-cm {
+    color: rgba(255, 255, 255, 0.28);
+    font-style: italic;
+}
+
+/* comment */
+
+/* ── Mobile: hide right panel, full-screen cropper ── */
+@media (max-width: 800px) {
+    body {
+        background: #000;
+        padding: 0;
+    }
+
+    .desktop-layout {
+        padding: 0;
+        gap: 0;
+    }
+
+    .desktop-right {
+        display: none;
+    }
+
+    .mobile-shell {
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0;
+        box-shadow: none;
+    }
+}
+
+/* ── Top Toolbar ── */
+.top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    background: #000;
+    z-index: 10;
+}
+
+.icon-btn,
+.text-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+
+.icon-btn:hover,
+.text-btn:hover {
+    opacity: 1;
+}
+
+.icon-btn svg {
+    width: 24px;
+    height: 24px;
+}
+
+.center-tools {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+.text-btn {
+    font-weight: 600;
+    color: #ffcc00;
+    /* iOS Done yellow/orange, but prompt said monochrome */
+    /* Adjusted to monochrome per user request: */
+    color: #fff;
+    background: #333;
+    padding: 6px 14px;
+    border-radius: 16px;
+    font-size: 14px;
+}
+
+#btn-load {
+    font-weight: normal;
+    font-size: 14px;
+}
+
+.select-wrapper {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
+
+.select-wrapper select {
+    appearance: none;
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    padding-right: 16px;
+    outline: none;
+}
+
+.select-wrapper::after {
+    content: '▼';
+    font-size: 10px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    opacity: 0.8;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+/* ── Viewport ── */
+#viewport {
+    flex: 1;
+    position: relative;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#preview-canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+/* ── Bottom Bar ── */
+.bottom-bar {
+    padding: 20px 0 40px;
+    background: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    z-index: 10;
+}
+
+#rotation-val {
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    font-variant-numeric: tabular-nums;
+}
+
+#ruler-container {
+    width: 100%;
+    max-width: 400px;
+    height: 60px;
+    position: relative;
+    overflow: hidden;
+}
+
+.ruler-fade-overlay {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 8;
+    background: linear-gradient(to right,
+            rgba(0, 0, 0, 0.96) 0%,
+            rgba(0, 0, 0, 0) 20%,
+            rgba(0, 0, 0, 0) 80%,
+            rgba(0, 0, 0, 0.96) 100%);
+}
+
+.ruler-center-mark {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    background: #ffb623;
+    box-shadow: 0 0 12px rgba(255, 182, 35, 0.55);
+    z-index: 12;
+    transform: translateX(-50%);
+    pointer-events: none;
+}
+
+/* Ruler CSS adjustments for RulerDrag */
+.RulerDrag {
+    position: relative;
+    user-select: none;
+    cursor: grab;
+    z-index: 2;
+}
+
+.RulerDrag:active {
+    cursor: grabbing;
+}
+
+.rulerNumber {
+    fill: rgba(255, 255, 255, 0.5);
+    font-size: 11px;
+    text-anchor: middle;
+    font-family: -apple-system, sans-serif;
+}
+
+.rulerValue {
+    display: none;
+}
+
+.rulerTick {
+    stroke: rgba(125, 125, 125, 0.82);
+    stroke-width: 1px;
+}
+
+.rulerTick.big {
+    stroke: rgba(168, 168, 168, 0.92);
+    stroke-width: 1.5px;
+}
+
+#status {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    color: #666;
+    pointer-events: none;
+}

@@ -1,0 +1,30 @@
+{
+    "name": "lumi-crop",
+    "version": "0.1.0",
+    "description": "Framework-agnostic, dependency-free image cropping library",
+    "type": "module",
+    "main": "./dist/index.cjs",
+    "module": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "import": "./dist/index.js",
+            "require": "./dist/index.cjs"
+        }
+    },
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "build": "tsup src/index.ts --format esm,cjs --dts --minify --clean --env.NODE_ENV production && npm run build:gzip",
+        "build:gzip": "gzip -k -9 dist/*.js dist/*.cjs dist/*.d.ts dist/*.d.cts",
+        "dev": "vite docs",
+        "dev:build": "tsup src/index.ts --format esm,cjs --dts --watch"
+    },
+    "devDependencies": {
+        "tsup": "^8.4.0",
+        "typescript": "^5.8.2",
+        "vite": "^6.2.0"
+    }
+}
