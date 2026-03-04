@@ -1,4 +1,4 @@
-import { LumiCrop } from '../src/index.ts';
+import { LumiCrop } from './lumicrop.js';
 
 const canvas = document.getElementById('preview-canvas');
 const status = document.getElementById('status');
