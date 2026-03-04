@@ -1,13 +1,13 @@
 import type { CropEngine } from './crop-engine';
-import type { ResizeHandle } from './types';
+import type { ResizeHandle, LumiCropOptions } from './types';
 
 const HANDLE_SIZE = 12;
-
+const R = "resize"
 const RESIZE_CURSORS: Record<ResizeHandle, string> = {
-    tl: 'nwse-resize', tr: 'nesw-resize',
-    bl: 'nesw-resize', br: 'nwse-resize',
-    t: 'ns-resize', b: 'ns-resize',
-    l: 'ew-resize', r: 'ew-resize',
+    tl: `nwse-${R}`, tr: `nesw-${R}`,
+    bl: `nesw-${R}`, br: `nwse-${R}`,
+    t: `ns-${R}`, b: `ns-${R}`,
+    l: `ew-${R}`, r: `ew-${R}`,
 };
 
 /**
@@ -25,18 +25,21 @@ export class Renderer {
     private imageEl: HTMLImageElement;
     private dpr: number;
     private engine: CropEngine;
+    private style?: LumiCropOptions['style'];
 
     constructor(
         canvas: HTMLCanvasElement,
         imageEl: HTMLImageElement,
         engine: CropEngine,
-        dpr: number
+        dpr: number,
+        style?: LumiCropOptions['style']
     ) {
         this.canvas = canvas;
         this.ctx = canvas.getContext('2d')!;
         this.imageEl = imageEl;
         this.engine = engine;
         this.dpr = dpr;
+        this.style = style;
 
         this._setupCanvas();
     }
@@ -121,21 +124,32 @@ export class Renderer {
 
         this.ctx.save();
 
+        // Safe style defaults
+        const s = this.style || {};
+        const maskColor = s.maskColor || 'rgba(0, 0, 0, 0.5)';
+        const cropBorderColor = s.cropBorderColor || '#ffffff';
+        const cropBorderLineWidth = s.cropBorderLineWidth ?? 1;
+        const gridColor = s.gridColor || 'rgba(255, 255, 255, 0.3)';
+        const gridLineWidth = s.gridLineWidth ?? 1;
+        const handleColor = s.handleColor || '#ffffff';
+        const handleLineWidth = s.handleLineWidth ?? 4;
+        const targetHandleLength = s.handleLength ?? 20;
+
         // Darkened mask outside crop box
-        this.ctx.fillStyle = 'rgba(0, 0, 0, 0.5)';
+        this.ctx.fillStyle = maskColor;
         this.ctx.fillRect(0, 0, w, tl.y);
         this.ctx.fillRect(0, br.y, w, h - br.y);
         this.ctx.fillRect(0, tl.y, tl.x, boxH);
         this.ctx.fillRect(br.x, tl.y, w - br.x, boxH);
 
         // Crop border
-        this.ctx.strokeStyle = '#ffffff';
-        this.ctx.lineWidth = 1;
+        this.ctx.strokeStyle = cropBorderColor;
+        this.ctx.lineWidth = cropBorderLineWidth;
         this.ctx.strokeRect(tl.x, tl.y, boxW, boxH);
 
         // Rule of thirds grid
-        this.ctx.strokeStyle = 'rgba(255, 255, 255, 0.3)';
-        this.ctx.lineWidth = 1;
+        this.ctx.strokeStyle = gridColor;
+        this.ctx.lineWidth = gridLineWidth;
         this.ctx.beginPath();
         this.ctx.moveTo(tl.x + boxW / 3, tl.y);
         this.ctx.lineTo(tl.x + boxW / 3, br.y);
@@ -147,23 +161,42 @@ export class Renderer {
         this.ctx.lineTo(br.x, tl.y + (boxH * 2) / 3);
         this.ctx.stroke();
 
-        // Resize handles (8 points)
-        const handles: Array<{ x: number; y: number }> = [
-            tl, { x: br.x, y: tl.y },
-            { x: tl.x, y: br.y }, br,
-            { x: tl.x + boxW / 2, y: tl.y },
-            { x: tl.x + boxW / 2, y: br.y },
-            { x: tl.x, y: tl.y + boxH / 2 },
-            { x: br.x, y: tl.y + boxH / 2 },
-        ];
+        // Resize handles (L-shaped corners & straight edges)
+        const hl = targetHandleLength; // Handle length
 
-        this.ctx.fillStyle = '#ffffff';
-        this.ctx.strokeStyle = '#333333';
-        this.ctx.lineWidth = 1;
-        for (const pt of handles) {
-            this.ctx.fillRect(pt.x - HANDLE_SIZE / 2, pt.y - HANDLE_SIZE / 2, HANDLE_SIZE, HANDLE_SIZE);
-            this.ctx.strokeRect(pt.x - HANDLE_SIZE / 2, pt.y - HANDLE_SIZE / 2, HANDLE_SIZE, HANDLE_SIZE);
-        }
+        this.ctx.beginPath();
+        // Top-Left
+        this.ctx.moveTo(tl.x, tl.y + hl);
+        this.ctx.lineTo(tl.x, tl.y);
+        this.ctx.lineTo(tl.x + hl, tl.y);
+        // Top-Right
+        this.ctx.moveTo(br.x - hl, tl.y);
+        this.ctx.lineTo(br.x, tl.y);
+        this.ctx.lineTo(br.x, tl.y + hl);
+        // Bottom-Right
+        this.ctx.moveTo(br.x, br.y - hl);
+        this.ctx.lineTo(br.x, br.y);
+        this.ctx.lineTo(br.x - hl, br.y);
+        // Bottom-Left
+        this.ctx.moveTo(tl.x + hl, br.y);
+        this.ctx.lineTo(tl.x, br.y);
+        this.ctx.lineTo(tl.x, br.y - hl);
+
+        // Edges
+        const cx = tl.x + boxW / 2;
+        const cy = tl.y + boxH / 2;
+        this.ctx.moveTo(cx - hl / 2, tl.y);
+        this.ctx.lineTo(cx + hl / 2, tl.y);
+        this.ctx.moveTo(cx - hl / 2, br.y);
+        this.ctx.lineTo(cx + hl / 2, br.y);
+        this.ctx.moveTo(tl.x, cy - hl / 2);
+        this.ctx.lineTo(tl.x, cy + hl / 2);
+        this.ctx.moveTo(br.x, cy - hl / 2);
+        this.ctx.lineTo(br.x, cy + hl / 2);
+
+        this.ctx.strokeStyle = handleColor;
+        this.ctx.lineWidth = handleLineWidth;
+        this.ctx.stroke();
 
         this.ctx.restore();
     }

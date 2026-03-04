@@ -142,10 +142,11 @@ export class CropEngine {
      * so visual content remains anchored to the user's last selected area.
      */
     fitCropBoxToViewport(): void {
+        const { transform } = this.state;
         const prevBox = { ...this.state.cropBox };
-        const prevScale = this.state.transform.scale;
-        const prevOffsetX = this.state.transform.offsetX;
-        const prevOffsetY = this.state.transform.offsetY;
+        const prevScale = transform.scale;
+        const prevOffsetX = transform.offsetX;
+        const prevOffsetY = transform.offsetY;
         const bounds = this._getViewportBounds();
         const minW = Math.min(MIN_BOX_SIZE, Math.max(1, bounds.width));
         const minH = Math.min(MIN_BOX_SIZE, Math.max(1, bounds.height));
@@ -257,19 +258,18 @@ export class CropEngine {
     zoomAt(scale: number, focusX: number, focusY: number): void {
         if (!Number.isFinite(scale) || !Number.isFinite(focusX) || !Number.isFinite(focusY)) return;
 
-        const W = this.state.imageWidth;
-        const H = this.state.imageHeight;
-        const centerX = W / 2;
-        const centerY = H / 2;
+        const { imageWidth, imageHeight, transform } = this.state;
+        const centerX = imageWidth / 2;
+        const centerY = imageHeight / 2;
 
-        const prevScale = Math.max(1e-6, this.state.transform.scale);
-        const prevOffsetX = this.state.transform.offsetX;
-        const prevOffsetY = this.state.transform.offsetY;
+        const prevScale = Math.max(1e-6, transform.scale);
+        const prevOffsetX = transform.offsetX;
+        const prevOffsetY = transform.offsetY;
 
         this.userZoom = Math.max(1, scale);
         this._adjustImageToCropBox();
 
-        const nextScale = this.state.transform.scale;
+        const nextScale = transform.scale;
         const ratio = nextScale / prevScale;
         this.state.transform.offsetX = prevOffsetX * ratio + (1 - ratio) * (focusX - centerX);
         this.state.transform.offsetY = prevOffsetY * ratio + (1 - ratio) * (focusY - centerY);
@@ -425,8 +425,6 @@ export class CropEngine {
         const maxY = bounds.maxY;
         const minW = Math.min(MIN_BOX_SIZE, Math.max(1, bounds.width));
         const minH = Math.min(MIN_BOX_SIZE, Math.max(1, bounds.height));
-        const imgW = bounds.width;
-        const imgH = bounds.height;
 
         if (isLocked && ratio !== null) {
             if (handle === 'l' || handle === 'r') {

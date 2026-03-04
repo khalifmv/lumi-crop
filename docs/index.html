@@ -4,7 +4,35 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>LumiCrop Demo</title>
+
+    <!-- Primary Meta Tags -->
+    <title>LumiCrop - Lightweight Image Cropper Engine</title>
+    <meta name="title" content="LumiCrop - Lightweight Image Cropper Engine" />
+    <meta name="description"
+        content="A lightweight, framework-agnostic, dependency-free image cropper engine for modern web applications. Supports TypeScript and headless configurations." />
+    <meta name="keywords"
+        content="image cropper, canvas cropper, typescript cropper, headless crop, zero-dependency, web image editor" />
+    <meta name="author" content="Khalif" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://khalifmv.github.io/lumi-crop/" />
+    <meta property="og:title" content="LumiCrop - Lightweight Image Cropper Engine" />
+    <meta property="og:description"
+        content="A lightweight, framework-agnostic, dependency-free image cropper engine for modern web applications." />
+    <meta property="og:image" content="https://khalifmv.github.io/lumi-crop/lumicrop.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://khalifmv.github.io/lumi-crop/" />
+    <meta property="twitter:title" content="LumiCrop - Lightweight Image Cropper Engine" />
+    <meta property="twitter:description"
+        content="A lightweight, framework-agnostic, dependency-free image cropper engine for modern web applications." />
+    <meta property="twitter:image" content="https://khalifmv.github.io/lumi-crop/lumicrop.png" />
+
+    <!-- Theme Color & Canonical -->
+    <meta name="theme-color" content="#0a0a0a" />
+    <link rel="canonical" href="https://khalifmv.github.io/lumi-crop/" />
     <script src="./ruler.js"></script>
     <link rel="stylesheet" href="./style.css">
 </head>
@@ -62,8 +90,11 @@
 
         <!-- Right: Product info panel -->
         <div class="desktop-right">
-            <div class="info-panel">
-                <img src="./lumicrop.png" alt="LumiCrop" class="info-logo" />
+            <main class="info-panel">
+                <h1
+                    style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;">
+                    LumiCrop - Image Cropper Engine</h1>
+                <img src="./lumicrop.png" alt="LumiCrop Logo" class="info-logo" />
                 <p class="info-desc">
                     A lightweight, framework-agnostic image cropper engine for modern web applications.
                 </p>
@@ -90,7 +121,7 @@
 <span class="c-cm">// Export the cropped result</span>
 <span class="c-kw">const</span> blob = <span class="c-kw">await</span> cropper.<span class="c-fn">toBlob</span>({ type: <span class="c-str">'image/jpeg'</span> });</code></pre>
                 </div>
-            </div>
+            </main>
         </div>
     </div>
 

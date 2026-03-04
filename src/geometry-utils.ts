@@ -18,15 +18,15 @@ export function getBoxCorners(box: CropBox): Array<{ x: number; y: number }> {
  */
 export function computeMinCoverScale(
     box: CropBox,
-    imageWidth: number,
-    imageHeight: number,
-    rotationDeg: number,
+    imgW: number,
+    imgH: number,
+    rotDeg: number,
 ): number {
-    const rad = rotationDeg * (Math.PI / 180);
+    const rad = rotDeg * (Math.PI / 180);
     const absCos = Math.abs(Math.cos(rad));
     const absSin = Math.abs(Math.sin(rad));
-    const needX = (box.width * absCos + box.height * absSin) / imageWidth;
-    const needY = (box.width * absSin + box.height * absCos) / imageHeight;
+    const needX = (box.width * absCos + box.height * absSin) / imgW;
+    const needY = (box.width * absSin + box.height * absCos) / imgH;
     return Math.max(1, needX, needY);
 }
 
@@ -36,15 +36,15 @@ export function computeMinCoverScale(
  */
 export function computeMinScaleForOffset(
     box: CropBox,
-    imageWidth: number,
-    imageHeight: number,
-    rotationDeg: number,
+    imgW: number,
+    imgH: number,
+    rotDeg: number,
     offsetX: number,
     offsetY: number,
 ): number {
-    const cx = imageWidth / 2;
-    const cy = imageHeight / 2;
-    const rad = rotationDeg * (Math.PI / 180);
+    const cx = imgW / 2;
+    const cy = imgH / 2;
+    const rad = rotDeg * (Math.PI / 180);
     const cos = Math.cos(rad);
     const sin = Math.sin(rad);
 
@@ -73,16 +73,16 @@ export function computeMinScaleForOffset(
  */
 export function clampOffsetToBounds(
     box: CropBox,
-    imageWidth: number,
-    imageHeight: number,
+    imgW: number,
+    imgH: number,
     scale: number,
-    rotationDeg: number,
+    rotDeg: number,
     offsetX: number,
     offsetY: number,
 ): { offsetX: number; offsetY: number } {
-    const cx = imageWidth / 2;
-    const cy = imageHeight / 2;
-    const rad = rotationDeg * (Math.PI / 180);
+    const cx = imgW / 2;
+    const cy = imgH / 2;
+    const rad = rotDeg * (Math.PI / 180);
     const cos = Math.cos(rad);
     const sin = Math.sin(rad);
 

@@ -58,4 +58,23 @@ export interface LumiCropOptions {
     idleAutoFitDelayMs?: number;
     /** Auto-fit transition duration in ms. Default: 280. */
     idleAutoFitAnimationDurationMs?: number;
+    /** Optional styling configuration for the crop overlay */
+    style?: {
+        /** Color of the crop handles. Default: '#ffffff' */
+        handleColor?: string;
+        /** Line width of the crop handles. Default: 4 */
+        handleLineWidth?: number;
+        /** Length of the crop handles. Default: 20 */
+        handleLength?: number;
+        /** Color of the main crop border. Default: '#ffffff' */
+        cropBorderColor?: string;
+        /** Line width of the main crop border. Default: 1 */
+        cropBorderLineWidth?: number;
+        /** Color of the rule-of-thirds grid. Default: 'rgba(255,255,255,0.3)' */
+        gridColor?: string;
+        /** Line width of the rule-of-thirds grid. Default: 1 */
+        gridLineWidth?: number;
+        /** Color of the dark mask outside crop area. Default: 'rgba(0,0,0,0.5)' */
+        maskColor?: string;
+    };
 }

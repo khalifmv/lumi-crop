@@ -148,7 +148,7 @@ export class LumiCrop {
         const { naturalWidth: w, naturalHeight: h } = this.imageEl;
         this.engine = new CropEngine(w, h, opts.aspectRatio);
         this.engine.setCanvasSize(this.canvas.offsetWidth, this.canvas.offsetHeight);
-        this.renderer = new Renderer(this.canvas, this.imageEl, this.engine, this.dpr);
+        this.renderer = new Renderer(this.canvas, this.imageEl, this.engine, this.dpr, opts.style);
 
         // Ensure image element is in the same stacking context as canvas
         if (!this.imageEl.parentElement) {

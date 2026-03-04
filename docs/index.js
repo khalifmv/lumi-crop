@@ -1,4 +1,5 @@
-import { LumiCrop } from './lumicrop.js';
+// import { LumiCrop } from './lumicrop.js';
+import { LumiCrop } from '../src/index.js';
 
 const canvas = document.getElementById('preview-canvas');
 const status = document.getElementById('status');
@@ -32,8 +33,11 @@ document.getElementById('file-input').addEventListener('change', async (e) => {
         cropper = new LumiCrop({
             canvas,
             image: file,
-            idleAutoFitDelayMs: 1000,
-            idleAutoFitAnimationDurationMs: 320
+            idleAutoFitDelayMs: 500,
+            idleAutoFitAnimationDurationMs: 320,
+            style: {
+                handleColor: '#ffb623'
+            }
         });
         await cropper.ready();
         status.textContent = '';
@@ -53,8 +57,11 @@ document.getElementById('file-input').addEventListener('change', async (e) => {
         cropper = new LumiCrop({
             canvas,
             image: './test.jpg',
-            idleAutoFitDelayMs: 1000,
-            idleAutoFitAnimationDurationMs: 320
+            idleAutoFitDelayMs: 500,
+            idleAutoFitAnimationDurationMs: 320,
+            style: {
+                handleColor: '#ffb623'
+            }
         });
         await cropper.ready();
         status.textContent = '';

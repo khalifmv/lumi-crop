@@ -2,6 +2,8 @@
 
 A lightweight, framework-agnostic, and dependency-free image cropping engine for modern web applications. LumiCrop provides a headless architecture, featuring a fixed crop box, smooth panning and pinch-to-zoom, rotation support, and pixel-perfect canvas export.
 
+<img alt="gzip size" src="https://img.shields.io/bundlejs/size/lumi-crop">
+
 ## Features
 
 - **Zero Dependencies**: Built entirely with standard Web APIs (Canvas, Touch Events, Pointer Events).
@@ -94,6 +96,8 @@ Options for the `toBlob` export method.
 ## TODO
 
 - [x] Publish to NPM
+- [ ] Customizable Handle
+- [ ] Customizable Grid
 
 ## License
 
