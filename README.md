@@ -60,6 +60,22 @@ Configuration object passed to the `LumiCrop` constructor.
 | `devicePixelRatio` | `number` | `window.devicePixelRatio` | Pixel ratio for rendering crispness on high-DPI displays. |
 | `idleAutoFitDelayMs` | `number` | `0` (Disabled) | Delay in milliseconds before auto-fitting/auto-centering the image after an interaction ends. |
 | `idleAutoFitAnimationDurationMs` | `number` | `280` | Duration of the auto-fit transition animation in milliseconds. |
+| `style` | `object` | `{}` | Complete styling configuration to customize crop handles, colors, and grid. See below. |
+
+### Styling Options (`style`)
+
+Pass an optional `style` object to customize the crop overlay UI.
+
+| Property | Type | Default | Description |
+| :--- | :--- | :--- | :--- |
+| `handleColor` | `string` | `'#ffffff'` | Color of the L-shaped resize corner handles and edge handles. |
+| `handleLineWidth` | `number` | `4` | Stroke width (thickness) of the crop handles in pixels. |
+| `handleLength` | `number` | `20` | Visual length of the corner handles and edge handles. |
+| `cropBorderColor` | `string` | `'#ffffff'` | Color of the main thin crop box border. |
+| `cropBorderLineWidth` | `number` | `1` | Stroke width of the main crop box border. |
+| `gridColor` | `string` | `'rgba(255, 255, 255, 0.3)'` | Color of the rule-of-thirds internal grid lines. |
+| `gridLineWidth` | `number` | `1` | Stroke width of the internal grid lines. |
+| `maskColor` | `string` | `'rgba(0, 0, 0, 0.5)'` | Color and opacity of the darkened mask outside the crop area. |
 
 ### Instance Methods
 
@@ -96,7 +112,7 @@ Options for the `toBlob` export method.
 ## TODO
 
 - [x] Publish to NPM
-- [ ] Customizable Handle
+- [x] Customizable Handle
 - [ ] Customizable Grid
 
 ## License
